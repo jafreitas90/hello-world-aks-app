@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+  labels:
+    app: hello-world
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+        - name: hello-world-container
+          image: registry.k8s.io/e2e-test-images/agnhost:2.39
+          args:
+            - "netexec"
+            - "--http-port=8080" # Start the HTTP server on port 8080
+          ports:
+            - containerPort: 8080
