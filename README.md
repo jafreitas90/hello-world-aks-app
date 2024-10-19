@@ -20,4 +20,4 @@ hello-world-aks-app/
 `service.yaml`: Exposes the application using a Kubernetes Service. By default, it uses NodePort for local development.
 `ingress.yaml (optional)`: Sets up an Ingress for external access via a domain name (useful for production environments).
 
-More details <a href="https://readme.com/" target="_blank">here</a>
+More details <a href="[https://readme.com/](https://jafreitas90.medium.com/deploying-a-kubernetes-application-with-infrastructure-as-code-iac-e1e5c3a05bfe)" target="_blank">here</a>
